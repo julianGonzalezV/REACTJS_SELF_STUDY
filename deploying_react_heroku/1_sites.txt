@@ -1,0 +1,183 @@
+
+Sitio del cual me basé:
+http://www.thegreatcodeadventure.com/deploying-react-redux-to-heroku/
+
+
+
+Se cubre lo siguiente:
+Configuring webpack for production.
+Configuring environment variables to hold our API host name for both development and production.
+Writing a production build task.
+Configuring our Express server for production.
+Pushing up to Heroku!
+
+
+Setting Up The Production Environment with Webpack::::::::::::::::::::::::
+
+Webpack compila nuestra app de nuestro SRC y el empaquetado lo almacena en memoria.
+
+
+
+
+Línea 5 archivo: "..\bro-chu-app\deployment\webpack.config.prod.js"
+
+Explicaion:
+Source map: Es una herramienta de debug que mapea los errores al original, es decir al que no está minificado
+
+
+entry: [  
+    './src/index'
+  ]
+  
+  Se le dice que el index.js será nuestro entry-point, recordar que en react el index el que va a cargar el DOM y el arbol de ahí para abajo.
+  
+  
+  
+  
+  -------  -------  -------  -------  -------
+  
+  output: {  
+    path: path.join(__dirname, 'public'),
+    filename: 'bundle.js',
+    publicPath: '/public/'
+  }
+ 
+  Acá le estamos que se debe compilar nuestra app en un archivo bundle.js y que se guardará dicho archivo en la carpeta public 
+ -------  -------  -------  -------  -------
+  
+  
+  -------  -------  -------  -------  -------
+  
+    plugins: [
+    new webpack.optimize.DedupePlugin(),
+    new webpack.optimize.UglifyJsPlugin({
+      minimize: true,
+      compress: {
+        warnings: false
+      }
+    }),
+    new webpack.DefinePlugin({
+      'process.env': {
+        'NODE_ENV': JSON.stringify('production')
+      }
+    })
+  ],
+  
+  Se definen los plugins
+  DedupePlugin: Identifica archivos duplicados y los quita 
+  UglifyJsPlugin: Minimiza el java script resultante
+  DefinePlugin:´ütil para definir variables golbales en tiempo de compilación , por ejemplo si necesitamos diferenciar desarrollo de releases
+  -------  -------  -------  -------  -------
+  
+  
+  -------  -------  -------  -------  -------
+  
+    module: {
+    loaders: [
+      { test: /\.js?$/,
+        loader: 'babel',
+        exclude: /node_modules/ },
+      { test: /\.scss?$/,
+        loader: 'style!css!sass',
+        include: path.join(__dirname, 'src', 'styles') },
+      { test: /\.png$/,
+        loader: 'file' },
+      { test: /\.(ttf|eot|svg|woff(2)?)(\?[a-z0-9]+)?$/,
+        loader: 'file'}
+    ]
+  }
+  
+  Por último se agregar Loader que indican a Webpack como cargar diferentes tipo de tareas
+   -------  -------  -------  -------  -------
+   
+   
+   
+   Configuring Environment Variables
+   
+   Ejemplo variables para las rutas , no puede existir un localhost quemado , debe ser una variable de ambiente, ver archivo word.
+   
+   Por ejemplo PersonApi antes estaba con localhost..Y SI se despliega en Heroku va a quedar algo así como https://catbook-api.herokuapp.com
+   
+   por lo cuál se requieren de estas variables
+   
+   
+   
+   
+   Luego seguimos con las tareas que se deben ejecutar para compilar (como las tareas que se crean en un proyecto gradle)
+   
+   Cómo usamos yarn entonces debemos hacer lo siguiente:
+   
+    Clean out the previous build from public/
+    Build the production index.html file that serves as the location of our DOM and the location at which React attaches to the DOM
+    Compile and output our app to the public/ directory.
+    Run our production server
+
+   Dicha serie de scrips anteriores se definen en package.json
+   
+   
+   
+   Copia:
+   Scripts antes estaba solo con esto:
+   "scripts": {
+    /*
+    "start": "react-scripts start",
+    "build": "react-scripts build",
+    "test": "react-scripts test --env=jsdom",
+    "eject": "react-scripts eject"*/
+   
+   
+   
+   
+   
+   
+   
+   
+ ERRORES QUE ME SALIERON AL SEGUIR LA URL ARRIBA:
+ 
+npm-run-all no se reconoce como un comando  
+ 
+ Solución: Instalarlo :) 
+ npm install npm-run-all   
+   
+     
+ Error Con rimraf : "rimraf" no se reconoce como un comando interno o externo
+ Solución
+ npm install rimraf
+ 
+ 
+ 
+ Error: 
+ esw webpack no se reconoce 
+ Solución:
+ Aplicar comando : npm i -g eslint eslint-watch or npm i -D eslint eslint-watch
+ 
+ Error:
+::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::
+	Oops! Something went wrong! :(
+
+	ESLint couldn't find a configuration file. To set up a configuration file for this project, please run:
+
+    eslint --init
+
+	ESLint looked for configuration files in D:\carpetaDocumentsJulian\estudio\REACT_JS\my_applications\react-js-application\bro-chu-app and its ancestors.
+
+	If you think you already have a configuration file or if you need more help, please stop by the ESLint chat room: https://gitter.im/eslint/eslint
+	
+	
+	
+	Solución:
+	eslint --init
+	Y configurar el archivo.
+	
+::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::
+
+
+
+Error:
+
+Solution:
+npm install file-system --save
+
+
+
+npm i -g gulp

@@ -1,0 +1,22 @@
+https://github.com/vhf/free-programming-books/blob/master/javascript-frameworks-resources.md
+
+curso:
+https://online.reacttraining.com/courses/enrolled/50507
+
+https://gist.github.com/dmeents/d8dc98c4909ae64f12215ccdfe35078b
+
+
+TABLA EJEMPLO:
+http://bootsnipp.com/snippets/V0jDV
+
+
+
+
+
+Webpack y al final ejemplos de REACT:
+https://medium.com/@rajaraodv/webpack-the-confusing-parts-58712f8fcad9
+
+
+
+Juego:
+https://facebook.github.io/react/tutorial/tutorial.html

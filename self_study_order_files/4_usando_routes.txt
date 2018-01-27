@@ -1,0 +1,13 @@
+La idea es tener la configuración de cuál URL le pertenece a que componenete:
+
+>Instalar la dependiencia:
+react-router
+
+{/*la propiedad "routes" aca lo que hace es cargar los Route existentes en el archivo routes.js  */ }
+
+ver cambios en el index.js
+nuevo archivo routes.js
+En NavBar se Importan la propiedad Link de Routes que busca en donde está matriculado el Route y realiza la acción.
+	>Note como se renderiza solo esa parte que se está llamando.
+	
+

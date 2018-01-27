@@ -1,0 +1,79 @@
+
+
+
+Success! Created reactjs-base-project at D:\carpetaDocumentsJulian\estudio\REA
+nside that directory, you can run several commands:
+
+ npm start
+   Starts the development server.
+
+ npm run build
+   Bundles the app into static files for production.
+
+ npm test
+   Starts the test runner.
+
+ npm run eject
+   Removes this tool and copies build dependencies, configuration files
+   and scripts into the app directory. If you do this, you can't go back!
+
+e suggest that you begin by typing:
+
+ cd reactjs-base-project
+ npm start
+
+appy hacking!
+
+
+
+
+This in very important too:::
+If you have a package.json file in your directory and you run the command "npm install", then npm will look at the dependencies that are listed in that file and download 
+the latest versions satisfying semver rules for all of thos}}
+
+
+
+lo que quité:
+"clean-dist": "npm run remove-dist && mkdirp ./productiondist && mkdirp ./productiondist/images && mkdirp ./productiondist/fonts",
+    "remove-dist": "node_modules/.bin/rimraf ./productiondist",
+    "build:html": "babel-node tools/buildHtml.js",
+    "prebuild": "npm-run-all clean-dist lint build:html",
+    "prebuild": "npm-run-all clean-dist lint build:html",
+	
+	
+	"scripts": {
+    "test": "test",
+    "prestart": "babel-node tools/startMessage.js",
+    "start": "npm-run-all --parallel open:src lint:watch",
+    "open:src": "babel-node tools/srcServer.js",
+    "lint": "node_modules/.bin/esw webpack.config.* src tools",
+    "lint:watch": "npm run lint -- --watch",
+    "clean-dist": "npm run remove-dist && mkdirp ./productiondist && mkdirp ./productiondist/images && mkdirp ./productiondist/fonts",
+    "remove-dist": "node_modules/.bin/rimraf ./productiondist",
+    "build:html": "babel-node tools/buildHtml.js",
+    "prebuild": "npm-run-all clean-dist lint build:html",
+    "build": "babel-node tools/build.js",
+    "postbuild": "babel-node tools/publicServer.js"
+  },
+  
+  
+  
+  
+  "scripts": { 
+    "build": "babel-node tools/build.js"
+  },
+  
+  
+  1) Cuand compile entonces manualmente copiar las imágnes para ver si funciona, ver index a ver a que apunta..
+  
+  2) Ver el código de la muchacha para ver como hace import de las imagenes o css SERA QUE LAS COLOCO POR COMPONEENTE? VER LA PAGIAN DEL MAN
+  
+  3) Modificar el proyecto para que tenga las imágenes dentro del Src
+  
+  RECREAR EL PROYECTO COMO LO HACEN ACÁ :https://simonsmith.io/using-webpack-to-build-react-components-and-their-assets/
+  
+  
+  
+  
+  
+  

@@ -1,0 +1,20 @@
+
+
+http://4dev.tech/2015/12/reactjs-datatable-with-sort-filter-and-pagination-example-part-1/
+
+
+http://4dev.tech/2016/03/tutorial-sorting-and-filtering-a-reactjs-datatable/
+
+
+
+
+
+1) Probar la siguiente estrategia, ya que no he encontrado mayor cosa
+
+>Crear la tabla normal con html, bootstrap, agregandole:
+	:Sort
+	:Filter
+	:pagination (este se puede dejar para cuando se necesite)
+	
+
+	

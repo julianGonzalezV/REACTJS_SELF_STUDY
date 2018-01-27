@@ -1,0 +1,114 @@
+web-page:
+
+Installation:
+http://sass-lang.com/install
+
+
+for windows we need to install ruby:
+
+
+
+Sass lets you use features that don't exist in CSS yet like variables, nesting, mixins, 
+inheritance and other nifty goodies that make writing CSS fun again.
+
+nesting : en sass:
+nav {
+  ul {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+  }
+
+  li { display: inline-block; }
+
+  a {
+    display: block;
+    padding: 6px 12px;
+    text-decoration: none;
+  }
+}
+
+AL procesarlo a css:
+nav ul {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+nav li {
+  display: inline-block;
+}
+
+nav a {
+  display: block;
+  padding: 6px 12px;
+  text-decoration: none;
+}
+
+
+
+
+:::::::::::Partials::::::::::::::::
+Archivos nombrados xxx_partial.scss que sirven para usarsen en otros sass files : Sass partials are used with the @import directiv.
+
+
+
+Imports:
+Se utilizan @import 'reset'; dentro del archivo en el cual se desea agregar el otro archivo:
+
+
+
+
+::::::::::::Mixins::::::::::::::::::::::::::::::
+A mixin lets you make groups of CSS declarations that you want to reuse throughout your site.
+
+
+eJEMPLO:
+
+.boton{
+  border-radius:4px;
+  border:solid 1px #aaa;
+  background:#ddd;
+  color:#000;
+}
+.rojo{
+  background:#f00;
+  color:#fff;
+}
+.verde{
+  background:#0f0;
+ color:#fff;
+}
+
+----mixin
+.boton_verde{
+  /* Se combinan dos clases anteriores para crear una tercera */
+  .boton;
+  .verde;
+}
+
+
+O de mejor forma pasando parámetros
+
+.boton(@fondo: #ddd, @texto: #000 ){
+  border-radius:4px;
+  border:solid 1px #aaa;
+  background:@fondo;
+  color:@texto;
+}
+
+.boton_verde{
+  /* Se envian los colores como parametros */
+  .boton(#0f0, #fff);
+}
+
+
+
+
+
+
+
+
+
+
+

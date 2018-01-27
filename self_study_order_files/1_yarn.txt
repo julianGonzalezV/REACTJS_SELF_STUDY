@@ -1,0 +1,49 @@
+https://yarnpkg.com/en/docs/install
+
+Documentacion:
+https://yarnpkg.com/en/docs/cli/
+
+El Modelo de Objetos del Documento (DOM) es una interfaz de programación de aplicaciones (API) para documentos HTML y XML
+
+
+Instalación:
+https://facebook.github.io/react/docs/installation.html
+
+1) $ yarn add create-react-app  : Este comando instala  todas las dependencias de aplicaciones reactJS Y PARECE QUE SI NO SE EJECUTA por ejemplo dentro de una carpeta de mis_aplicaciones se ejecuta y de allí en adelente puedo hacer por ejemplo create-react-app hello-world.
+
+2) yarn create-react-app hello-world  : Este me crea el proyecto directamente. Usar este para uno nuevo !!
+
+
+
+
+
+afiliados principales :
+
+pÁGINA DESDE DONDE OBTUVE 
+https://medium.com/@diamondgfx/learning-react-with-create-react-app-part-1-a12e1833fdc#.h3yvvw63d
+
+dENTRO DE LA CARPETA DEL PROYECTO Entonces podemos ejecutar los siguientes comandos de Yarn.
+
+
+
+Success! Created hello-world at /Users/brandon/Documents/dev/create-react-app/hello-world
+Inside that directory, you can run several commands:
+yarn start
+    Starts the development server.
+yarn run build
+    Bundles the app into static files for production.
+yarn test
+    Starts the test runner.
+yarn run eject
+    Removes this tool and copies build dependencies, configuration files
+    and scripts into the app directory. If you do this, you can’t go back!
+We suggest that you begin by typing:
+cd hello-world
+  yarn start
+
+sí no es Af entonces consultar c
+
+
+Cuando se despliega queda corriendo por el http://localhost:3000/
+
+y dice "To get started, edit src/App.js and save to reload."

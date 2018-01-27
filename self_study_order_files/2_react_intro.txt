@@ -1,0 +1,71 @@
+
+
+Intro:
+Para entender la instalaci�n y la estructura de directorios que se crea para un proyecto react-js le� esto:
+1)
+https://medium.com/@diamondgfx/learning-react-with-create-react-app-part-1-a12e1833fdc#.h3yvvw63d
+
+2)
+https://medium.com/@diamondgfx/learning-react-with-create-react-app-part-2-3ad99f38b48d#.qt7f0ibqm
+  >Permite la separación de componentes.
+  >Se usa Emacs Script
+  >Permite el uso de Props (propiedades dentro)
+  >Ordenado
+
+  
+  
+Introducing Class Components: Son clases que extienden de Component
+
+
+version 1 :::::::::::::::::::::::
+//import React from 'react';
+import React, { Component } from 'react';//para tener acceso a la clase Component
+import './HelloWorld.css';
+const HelloWorld = (props) => {
+  return (<div className="HelloWorld">{props.name}</div>);
+};
+export default HelloWorld;
+
+
+
+3) Sigo con
+https://medium.com/@diamondgfx/learning-react-with-create-react-app-part-3-322447d14192#.7ynakvey4
+
+2017-02-01::
+
+Quedo en Creating A Greeting Adder Component (del link part3)
+
+
+
+
+
+
+
+--:::::::::::::::::::::::::::::::::::::::::::::::::::::::::::
+https://medium.com/@diamondgfx/learning-react-with-create-react-app-part-4-9f843c8c1ccc#.50w8i0sxd
+
+
+ADICIONANDO PRUEBAS CON JEST
+
+1) Adicionar nuevos paquetes:
+$ yarn add react-test-renderer enzyme react-addons-test-utils --dev
+
+
+
+--:::::::::::::::::::::::::::::::::::::::::::::::::::::::::::
+
+
+
+
+MAS TUTORIALES:
+
+https://carlosazaustre.es/blog/ejemplo-de-aplicacion-con-react-js-en-ecmascript-6/
+
+https://carlosazaustre.es/blog/consumiendo-un-api-rest-desde-react-js-con-ecmascript6/
+
+
+Usando feth:
+
+https://developers.google.com/web/updates/2015/03/introduction-to-fetch
+
+

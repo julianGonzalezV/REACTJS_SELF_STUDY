@@ -1,0 +1,73 @@
+state VS Props- Explicacion:
+http://stackoverflow.com/questions/27991366/what-is-the-difference-between-state-and-props-in-react
+
+En resumen lo que es state en el componente padre se puede pasar como props al componente hijo y es inmutable en el hijo:Por lo que si el hijo requiere modificar algo 
+debe hacerlo directamenete comunicandose con el padre.
+
+
+:::::::::::::::::::::::::::::::::::::::::::::::::
+basically, reduX allows you to store your app state inside an object tree
+
+
+Stores:
+	>Realizan las peticiones al server
+	>Cuando obtienen el paylodad de respuesta se los pasan al REDUCER, y estos a su vez a los componentes.
+
+Reducers : 
+	>Hacen que los Stores sean conocidos por los componentes.
+	>Relaciona los actions con el state
+	>to tell you how that action transforms the state tree.
+	
+
+Container: A container component is a component that is connected to the store 
+
+::::::::::::::::::::
+2017-05-10::::::::::::::::::::
+:::: A CONTINUACION Y SEGUN EL MODELO APLICADO, LO QUE SE DEBE DE HACER CADA VEZ QUE NECESITAMOS EL USO DE UN SERVICIO NUEVO EN NUESTRA APP
+
+1) Matricular el router dentro de routers.js (ver  src\routes.js)
+
+2) en el componente padre, en mi caso src\components\person\js\PersonTable.js crear el nuevo link 
+
+
+::::::::::::::::::::
+Acá combinan ambos, el Redux y la modificación del state del componenete más interno (hijo)
+https://medium.com/@yaoxiao1222/implementing-search-filter-a-list-on-redux-react-bb5de8d0a3ad
+
+
+FormasElectronicas-Serenity-AcceptanceTestPDN  stable
+ failed
+	
+Instalando dependiencia:
+
+1) 
+npm install --save react-redux
+
+o
+yarn add redux  (yarn add es lo mismo que npm install --save )
+
+2) yarn add redux-thunk (para el ejemplo que tengo actualmente)
+
+
+3) yarn add react-redux 
+
+
+
+WLS_LXAPPS2
+
+gsnsmap	sur@2015	
+gsnsmap sur@2015	
+
+sur@
+
+
+
+Recommneded sources:
+https://github.com/reactjs/redux/blob/master/docs/basics/UsageWithReact.md
+
+Este es uno del cual tomé varias cosas:
+http://www.thegreatcodeadventure.com/react-redux-tutorial-part-iii-async-redux/
+
+::::::::::::::::::::
+2017-05-22::::::::::::::::::::
+::::::::::::::::::::

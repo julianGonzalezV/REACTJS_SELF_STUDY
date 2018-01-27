@@ -1,0 +1,7 @@
+>>Cuando se vaya a instalar una nueva dependiencia, detenga la ejecución del programa actual, ya que como un ejemplo, este hace uno del archivo package.json
+ y lo que sucede es que al tratar de escribir sobre este la nueva dependiencia encuentra que está bloquedo y no escribe nada, así lo que sucede es que cuando 
+ tratemos de dar yarn start no va a funcionar y sacará error al tratar de subir el app.
+ 
+ 
+ 
+>>
