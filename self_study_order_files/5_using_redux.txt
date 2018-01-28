@@ -1,7 +1,7 @@
 state VS Props- Explicacion:
 http://stackoverflow.com/questions/27991366/what-is-the-difference-between-state-and-props-in-react
 
-En resumen lo que es state en el componente padre se puede pasar como props al componente hijo y es inmutable en el hijo:Por lo que si el hijo requiere modificar algo 
+En resumen lo que es state en el componente padre se puede pasar como props al componente hijo y es inmutable en el hijo,Por lo que si el hijo requiere modificar algo 
 debe hacerlo directamenete comunicandose con el padre.
 
 
@@ -34,9 +34,6 @@ Container: A container component is a component that is connected to the store
 Acá combinan ambos, el Redux y la modificación del state del componenete más interno (hijo)
 https://medium.com/@yaoxiao1222/implementing-search-filter-a-list-on-redux-react-bb5de8d0a3ad
 
-
-FormasElectronicas-Serenity-AcceptanceTestPDN  stable
- failed
 	
 Instalando dependiencia:
 

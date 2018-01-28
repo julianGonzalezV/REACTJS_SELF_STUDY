@@ -9,7 +9,7 @@ El Modelo de Objetos del Documento (DOM) es una interfaz de programación de apli
 Instalación:
 https://facebook.github.io/react/docs/installation.html
 
-1) $ yarn add create-react-app  : Este comando instala  todas las dependencias de aplicaciones reactJS Y PARECE QUE SI NO SE EJECUTA por ejemplo dentro de una carpeta de mis_aplicaciones se ejecuta y de allí en adelente puedo hacer por ejemplo create-react-app hello-world.
+1) $ yarn add create-react-app  : Este comando instala  todas las dependencias de aplicaciones reactJS Y PARECE QUE SI NO SE EJECUTA por ejemplo dentro de una carpeta de mis_aplicaciones se ejecuta y de allí en adelante puedo hacer por ejemplo create-react-app hello-world.
 
 2) yarn create-react-app hello-world  : Este me crea el proyecto directamente. Usar este para uno nuevo !!
 

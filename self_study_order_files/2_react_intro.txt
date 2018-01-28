@@ -1,7 +1,7 @@
 
 
 Intro:
-Para entender la instalaci�n y la estructura de directorios que se crea para un proyecto react-js le� esto:
+Para entender la instalaci�n y la estructura de directorios que se crea para un proyecto react-js lea esto:
 1)
 https://medium.com/@diamondgfx/learning-react-with-create-react-app-part-1-a12e1833fdc#.h3yvvw63d
 
